@@ -7,7 +7,7 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 
 var recognition = new SpeechRecognition();
 
-recognition.continuous = false;
+recognition.continuous = true;
 recognition.lang = 'zh-TW';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
@@ -41,11 +41,9 @@ recognition.onresult = function(event) {
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
   console.log('Confidence: ' + event.results[0][0].confidence);
-}
-
-recognition.onspeechend = function() {
   recognition.stop();
 }
+
 
 recognition.onnomatch = function(event) {
   diagnostic.textContent = "I didn't recognise that color.";
