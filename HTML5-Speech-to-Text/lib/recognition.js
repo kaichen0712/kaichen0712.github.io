@@ -9,8 +9,8 @@ let recognition = new webkitSpeechRecognition()
 // set params
 recognition.continuous = false
 recognition.interimResults = true
-adjustStartSecond = -0.3
-adjustEndSecond = 0.3
+adjustStartSecond = -1
+adjustEndSecond = 1
 
 let pauseInterval = 30 * 60
 let pauseSeconds = 3
