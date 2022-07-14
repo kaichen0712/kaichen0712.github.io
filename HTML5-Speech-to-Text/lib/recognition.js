@@ -12,7 +12,7 @@ recognition.interimResults = true
 adjustStartSecond = -0.1 
 adjustEndSecond = 0.5
 
-let pauseInterval = 30*40
+let pauseInterval = 30*10
 let pauseSeconds = 2
 
 // start immediately
