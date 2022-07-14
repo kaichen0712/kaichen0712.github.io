@@ -13,7 +13,7 @@ adjustStartSecond = -0.5
 adjustEndSecond = 0.5
 
 let pauseInterval = 30 * 60
-let pauseSeconds = 1
+let pauseSeconds = 3
 
 // start immediately
 // recognition.start();
