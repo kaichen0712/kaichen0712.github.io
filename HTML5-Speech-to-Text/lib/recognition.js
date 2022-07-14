@@ -9,11 +9,11 @@ let recognition = new webkitSpeechRecognition()
 // set params
 recognition.continuous = false
 recognition.interimResults = true
-adjustStartSecond = -0.1 
+adjustStartSecond = -0.5 
 adjustEndSecond = 0.5
 
-let pauseInterval = 30*10
-let pauseSeconds = 2
+let pauseInterval = 30 * 60
+let pauseSeconds = 3
 
 // start immediately
 // recognition.start();
@@ -100,10 +100,10 @@ let recognitionFinish = function () {
 let tempStart
 let tempTransscript
 recognition.onresult = function (event) {
-  let result = event.results[ event.results.length - 1 ]
+  let result = event.results[ event.results.length ]
   // let section = $('<div></div>').text(result[result.length - 1 ].transcript)
   // $(text).append(section);
-  let transcript = result[ result.length - 1 ].transcript.trim()
+  let transcript = result[ result.length ].transcript.trim()
   let caption = SpeechToText.getCaption()
   if (caption === '' && transcript !== '' && !tempStart) {
     tempStart = SpeechToText.getPlayerCurrentTime(adjustStartSecond)
