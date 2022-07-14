@@ -12,8 +12,8 @@ recognition.interimResults = true
 adjustStartSecond = 0
 adjustEndSecond = 0
 
-let pauseInterval = 0
-let pauseSeconds = 0
+let pauseInterval = 30 * 60
+let pauseSeconds = 1
 
 // start immediately
 // recognition.start();
