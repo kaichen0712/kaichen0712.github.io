@@ -92,7 +92,7 @@ startBtn.addEventListener("click", function () {
 let recognitionFinish = function () {
   recognition.stop();
   playingFlag = false;
-  $(".content-controller .button.disabled").removeClass("disabled");
+  $(".content-controller .button.disabled");
   $(".recognition-status").attr("data-recognition-status", "finish");
   SpeechToText.complete();
   //console.log('finish')
