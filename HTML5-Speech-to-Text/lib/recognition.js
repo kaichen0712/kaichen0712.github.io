@@ -101,7 +101,7 @@ let recognitionFinish = function () {
 let tempStart;
 let tempTransscript;
 recognition.onresult = function (event) {
-  let result = event.results[event.results.length];
+  let result = event.results[event.results.length - 1];
   // let section = $('<div></div>').text(result[result.length - 1 ].transcript)
   // $(text).append(section);
   let transcript = result[result.length - 1].transcript.trim();
