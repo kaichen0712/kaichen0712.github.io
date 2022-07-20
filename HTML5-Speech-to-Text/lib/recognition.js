@@ -6,7 +6,7 @@ let audioPlay;
 
 let recognition = new webkitSpeechRecognition();
 // set params
-recognition.continuous = false;
+recognition.continuous = true;
 recognition.interimResults = true;
 adjustStartSecond = -0.5;
 adjustEndSecond = 0.5;
@@ -84,7 +84,7 @@ startBtn.addEventListener("click", function () {
     recognition.start();
 
     //document.querySelector('.text-content').style.display = 'block'
-    $(".text-content");
+    $(".text-content").removeClass("hide");
   };
   startRecognition();
 });
@@ -92,7 +92,7 @@ startBtn.addEventListener("click", function () {
 let recognitionFinish = function () {
   recognition.stop();
   playingFlag = false;
-  $(".content-controller .button.disabled");
+  $(".content-controller .button.disabled").removeClass("disabled");
   $(".recognition-status").attr("data-recognition-status", "finish");
   SpeechToText.complete();
   //console.log('finish')
