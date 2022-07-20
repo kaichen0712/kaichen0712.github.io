@@ -144,14 +144,7 @@ let SpeechToText = {
   hasContent: function () {
     return this.tbody.children().length > 0;
   },
-  removeEmptyRow: function () {
-    this.tbody.find("tr .caption textarea").each((i, caption) => {
-      caption = $(caption);
-      if (caption.val().trim() === "") {
-        caption.parents("tr:first").remove();
-      }
-    });
-  },
+
   getCaption: function () {
     return this.tbody.find("tr:last .caption textarea").val();
   },
