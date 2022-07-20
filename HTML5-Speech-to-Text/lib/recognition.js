@@ -84,7 +84,7 @@ startBtn.addEventListener("click", function () {
     recognition.start();
 
     //document.querySelector('.text-content').style.display = 'block'
-    $(".text-content").removeClass("hide");
+    $(".text-content");
   };
   startRecognition();
 });
